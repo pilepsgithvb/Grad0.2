@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:background="@drawable/gradobg">
+
+    <LinearLayout
+        android:id="@+id/greenContainer"
+        android:layout_width="250dp"
+        android:layout_height="130dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/container"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24">
+
+        <TextView
+            android:id="@+id/TotalGrade"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Score"
+            android:textSize="34dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/back"
+        android:background="?android:attr/selectableItemBackground"
+        android:backgroundTint="@color/green"
+        android:scaleType="fitCenter"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.040"
+        app:layout_constraintHorizontal_bias="0.10"
+        />
+
+    <TextView
+        android:id="@+id/TermNum"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="# Term"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13"
+        />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="250dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/green"
+        android:text="ADD SUBJECT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/greenContainer" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="407dp"
+        android:layout_height="456dp"
+        android:background="@drawable/listview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/plus"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- Terms List Inside ScrollView -->
+        <LinearLayout
+            android:id="@+id/subjectsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp" />
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
